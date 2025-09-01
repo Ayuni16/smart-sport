@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* ... your existing .input-field and .dropdown-link classes ... */
+
+  .gallery-image {
+      @apply rounded-lg shadow-lg w-full h-full object-cover transition-transform duration-300 transform hover:scale-105;
+  }
+
+  .form-label {
+      @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  /* This is for most input fields */
+  .input-field {
+    @apply block w-full px-4 py-2 text-gray-800 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500;
+  }
+  /* This is for form labels */
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  .club-card {
+      @apply text-white p-8 rounded-lg shadow-lg flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
+  }
+
+ 
+}

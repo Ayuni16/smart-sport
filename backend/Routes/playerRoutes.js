@@ -1,0 +1,25 @@
+
+
+const express = require('express');
+const router = express.Router();
+const { protect } = require('../middleware/authMiddleware');
+const {
+    registerPlayer,
+    getMyProfiles,
+    updateMyProfile,
+    deleteMyProfile
+} = require('../Controllers/playerController');
+
+
+router.post('/register', protect, registerPlayer);
+
+
+router.get('/my-profiles', protect, getMyProfiles); 
+
+
+router.put('/profile/:id', protect, updateMyProfile);
+
+
+router.delete('/profile/:id', protect, deleteMyProfile);
+
+module.exports = router;
